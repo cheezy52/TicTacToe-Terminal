@@ -170,8 +170,8 @@ end
 class ComputerPlayer
   attr_reader :name
 
-  def initialize
-    @name = "Tandy 400"
+  def initialize(name = "Tandy 400")
+    @name = name
   end
 
   def move(game, mark)
