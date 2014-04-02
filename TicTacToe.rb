@@ -207,13 +207,6 @@ class ComputerPlayer
   end
 end
 
-if __FILE__ == $PROGRAM_NAME
-  hp = HumanPlayer.new("Ned")
-  cp = ComputerPlayer.new
-
-  TicTacToe.new(hp, cp).run
-end
-
 class SuperComputerPlayer < ComputerPlayer
   require './TicTacToeNode.rb'
 
@@ -243,4 +236,11 @@ class SuperComputerPlayer < ComputerPlayer
     indeterminate_moves.sample
 
   end
+end
+
+if __FILE__ == $PROGRAM_NAME
+  hp = HumanPlayer.new("Ned")
+  cp = SuperComputerPlayer.new
+
+  TicTacToe.new(hp, cp).run
 end
